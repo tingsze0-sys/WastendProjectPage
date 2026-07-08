@@ -338,38 +338,6 @@ export function WastendPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1180px] px-5 py-14 sm:px-6 md:px-10 md:py-24">
-        <SectionHeading eyebrow={t("venue.eyebrow")} title={t("venue.title")} />
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[0.78fr_1.22fr]">
-          <FadeUp>
-            <div>
-              <p className="text-[18px] leading-relaxed text-[var(--ink-soft)]">{t("venue.body")}</p>
-              <ul className="mt-6 space-y-3">
-                {venueFacts.map((fact) => (
-                  <li key={fact} className="rounded-2xl border border-[var(--line)] bg-white/55 p-4 text-[15px] text-[var(--ink)]">
-                    {fact}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </FadeUp>
-          <ScaleIn>
-            <figure className="overflow-hidden rounded-2xl border border-[var(--line)] bg-white/70 p-3">
-              <img
-                src={jccacImage}
-                alt={t("venue.imageAlt")}
-                className="aspect-[16/9] w-full rounded-xl object-cover"
-              />
-              <figcaption className="px-2 py-3 text-[12px] leading-relaxed text-[var(--ink-soft)]">
-                {t("venue.caption")}
-                <br />
-                {t("venue.source")}
-              </figcaption>
-            </figure>
-          </ScaleIn>
-        </div>
-      </section>
-
       <section className="border-y border-[var(--line)] bg-[var(--paper-soft)]">
         <div className="mx-auto max-w-[1180px] px-5 py-14 sm:px-6 md:px-10 md:py-24">
           <SectionHeading eyebrow={t("premise.eyebrow")} title={t("premise.title")} />
@@ -487,7 +455,6 @@ export function WastendPage() {
             ))}
           </div>
         </div>
-        <p className="mt-3 text-[12px] leading-relaxed text-[var(--ink-soft)]">{t("comparison.sources")}</p>
       </section>
 
       <section className="border-y border-[var(--line)] bg-[var(--paper-soft)]">
@@ -624,6 +591,38 @@ export function WastendPage() {
         </Stagger>
       </section>
 
+      <section className="mx-auto max-w-[1180px] px-5 py-14 sm:px-6 md:px-10 md:py-24">
+        <SectionHeading eyebrow={t("venue.eyebrow")} title={t("venue.title")} />
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[0.78fr_1.22fr]">
+          <FadeUp>
+            <div>
+              <p className="text-[18px] leading-relaxed text-[var(--ink-soft)]">{t("venue.body")}</p>
+              <ul className="mt-6 space-y-3">
+                {venueFacts.map((fact) => (
+                  <li key={fact} className="rounded-2xl border border-[var(--line)] bg-white/55 p-4 text-[15px] text-[var(--ink)]">
+                    {fact}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </FadeUp>
+          <ScaleIn>
+            <figure className="overflow-hidden rounded-2xl border border-[var(--line)] bg-white/70 p-3">
+              <img
+                src={jccacImage}
+                alt={t("venue.imageAlt")}
+                className="aspect-[16/9] w-full rounded-xl object-cover"
+              />
+              <figcaption className="px-2 py-3 text-[12px] leading-relaxed text-[var(--ink-soft)]">
+                {t("venue.caption")}
+                <br />
+                {t("venue.source")}
+              </figcaption>
+            </figure>
+          </ScaleIn>
+        </div>
+      </section>
+
       <section className="border-y border-[var(--line)] bg-[var(--paper-soft)]">
         <div className="mx-auto max-w-[1180px] px-5 py-14 sm:px-6 md:px-10 md:py-24">
           <SectionHeading eyebrow={t("resources.eyebrow")} title={t("resources.title")} />
@@ -647,7 +646,7 @@ export function WastendPage() {
                     <span className="text-[11px] uppercase tracking-[0.2em] text-[var(--ink-soft)]">
                       {note.label}
                     </span>
-                    <p className="mt-3 text-[1.35rem] font-semibold leading-tight text-[var(--ink)]">
+                    <p className="mt-3 text-[1.35rem] font-normal leading-tight text-[var(--ink)]">
                       {note.value}
                     </p>
                   </div>

@@ -18,7 +18,6 @@ const required = [
   "useTranslation",
   "ObjectIcon",
   "JURISDICTIONS",
-  "sources",
   "details",
   "dialog",
   "jccacImage",
