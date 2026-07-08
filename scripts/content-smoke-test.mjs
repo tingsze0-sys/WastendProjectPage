@@ -9,6 +9,10 @@ const translationFiles = [
   "src/locales/zh/common.json",
   "src/i18n/index.ts",
 ];
+const animationFiles = [
+  "src/app/components/pixel-card.tsx",
+  "src/app/components/pixel-card.css",
+];
 
 const required = [
   "useTranslation",
@@ -18,6 +22,7 @@ const required = [
   "details",
   "dialog",
   "jccacImage",
+  "PixelCard",
 ];
 
 const forbidden = [
@@ -33,7 +38,14 @@ const forbidden = [
 ];
 
 const missing = required.filter((text) => !source.includes(text));
-const missingFiles = translationFiles.filter((path) => !existsSync(path));
+const missingFiles = [...translationFiles, ...animationFiles].filter((path) => !existsSync(path));
+const animationSources = animationFiles
+  .filter((path) => existsSync(path))
+  .map((path) => readFileSync(path, "utf8"))
+  .join("\n");
+const missingAnimationContent = ["pixel-card-content", "prefers-reduced-motion"].filter(
+  (text) => !animationSources.includes(text),
+);
 const searchableText = [
   source,
   navSource,
@@ -74,6 +86,7 @@ if (
   missing.length ||
   stale.length ||
   missingFiles.length ||
+  missingAnimationContent.length ||
   navMissing.length ||
   navStale.length ||
   appMissing.length ||
@@ -82,6 +95,7 @@ if (
   console.error("Content smoke test failed.");
   if (missing.length) console.error("Missing:", missing.join(", "));
   if (missingFiles.length) console.error("Missing files:", missingFiles.join(", "));
+  if (missingAnimationContent.length) console.error("Missing animation content:", missingAnimationContent.join(", "));
   if (navMissing.length) console.error("Missing nav content:", navMissing.join(", "));
   if (navStale.length) console.error("Stale nav content:", navStale.join(", "));
   if (appMissing.length) console.error("Missing i18n app wiring:", appMissing.join(", "));

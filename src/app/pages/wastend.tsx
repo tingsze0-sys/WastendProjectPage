@@ -5,6 +5,7 @@ import { X } from "lucide-react";
 import { SectionHeading } from "../components/section-heading";
 import { ReferenceList, type ReferenceGroup } from "../components/reference-list";
 import { FadeUp, ScaleIn, Stagger, StaggerItem } from "../components/motion-primitives";
+import { PixelCard } from "../components/pixel-card";
 
 import floorPlan from "../../assets/curatorial-plan/floor-plan.png";
 import jccacImage from "../../assets/curatorial-plan/jccac-exterior.webp";
@@ -71,6 +72,8 @@ const JURISDICTIONS = [
   { code: "DK", flag: "🇩🇰" },
   { code: "SE", flag: "🇸🇪" },
 ];
+
+const PIXEL_VARIANTS = ["green", "blue", "warm"] as const;
 
 const ARTWORK_IMAGES = {
   kruger: krugerImage,
@@ -375,19 +378,25 @@ export function WastendPage() {
           </FadeUp>
 
           <Stagger className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
-            {presumptions.map((item) => (
+            {presumptions.map((item, index) => (
               <StaggerItem key={item.title}>
-                <article className="flex h-full flex-col rounded-2xl border border-[var(--line)] bg-white/55 p-6">
-                  <span className="text-[11px] uppercase tracking-[0.2em] text-[var(--green)]">
-                    {item.label}
-                  </span>
-                  <h3 className="mt-4 text-[1.35rem] font-semibold leading-tight text-[var(--ink)]">
-                    {item.title}
-                  </h3>
-                  <p className="mt-4 text-[15px] leading-relaxed text-[var(--ink-soft)]">
-                    {item.copy}
-                  </p>
-                </article>
+                <PixelCard
+                  variant={PIXEL_VARIANTS[index % PIXEL_VARIANTS.length]}
+                  noFocus
+                  className="flex h-full flex-col rounded-2xl border border-[var(--line)] bg-white/55 p-6"
+                >
+                  <article className="pixel-card-content flex h-full flex-col">
+                    <span className="text-[11px] uppercase tracking-[0.2em] text-[var(--green)]">
+                      {item.label}
+                    </span>
+                    <h3 className="mt-4 text-[1.35rem] font-semibold leading-tight text-[var(--ink)]">
+                      {item.title}
+                    </h3>
+                    <p className="mt-4 text-[15px] leading-relaxed text-[var(--ink-soft)]">
+                      {item.copy}
+                    </p>
+                  </article>
+                </PixelCard>
               </StaggerItem>
             ))}
           </Stagger>
@@ -483,29 +492,35 @@ export function WastendPage() {
         <div className="mx-auto max-w-[1180px] px-5 py-14 sm:px-6 md:px-10 md:py-24">
           <SectionHeading eyebrow={t("participation.eyebrow")} title={t("participation.title")} />
           <Stagger className="grid grid-cols-1 gap-5 md:grid-cols-3">
-            {participationSteps.map((step) => (
+            {participationSteps.map((step, index) => (
               <StaggerItem key={step.step}>
-                <article className="h-full rounded-2xl border border-[var(--line)] bg-white/55 p-6">
-                  <span className="text-[12px] uppercase tracking-[0.24em] text-[var(--blue)]">
-                    {t("participation.stepLabel")} {step.step}
-                  </span>
-                  <h3 className="mt-4 text-[1.4rem] font-semibold leading-tight text-[var(--ink)]">
-                    {step.title}
-                  </h3>
-                  <p className="mt-4 text-[15px] leading-relaxed text-[var(--ink-soft)]">
-                    {step.detail}
-                  </p>
-                  <ul className="mt-6 space-y-2">
-                    {step.prompts.map((prompt) => (
-                      <li
-                        key={prompt}
-                        className="rounded-full border border-[var(--line)] bg-[var(--paper)] px-4 py-2 text-[13px] text-[var(--ink)]"
-                      >
-                        {prompt}
-                      </li>
-                    ))}
-                  </ul>
-                </article>
+                <PixelCard
+                  variant={PIXEL_VARIANTS[(index + 1) % PIXEL_VARIANTS.length]}
+                  noFocus
+                  className="h-full rounded-2xl border border-[var(--line)] bg-white/55 p-6"
+                >
+                  <article className="pixel-card-content h-full">
+                    <span className="text-[12px] uppercase tracking-[0.24em] text-[var(--blue)]">
+                      {t("participation.stepLabel")} {step.step}
+                    </span>
+                    <h3 className="mt-4 text-[1.4rem] font-semibold leading-tight text-[var(--ink)]">
+                      {step.title}
+                    </h3>
+                    <p className="mt-4 text-[15px] leading-relaxed text-[var(--ink-soft)]">
+                      {step.detail}
+                    </p>
+                    <ul className="mt-6 space-y-2">
+                      {step.prompts.map((prompt) => (
+                        <li
+                          key={prompt}
+                          className="rounded-full border border-[var(--line)] bg-[var(--paper)] px-4 py-2 text-[13px] text-[var(--ink)]"
+                        >
+                          {prompt}
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                </PixelCard>
               </StaggerItem>
             ))}
           </Stagger>
