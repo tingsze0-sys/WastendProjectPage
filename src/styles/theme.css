@@ -2,12 +2,12 @@
 
 :root {
   --font-size: 16px;
-  --background: #f7f6f2;
+  --background: #eef4ea;
   --foreground: #2b2f2c;
 
-  /* Wastend recreation palette — muted green / grey / blue on pale paper */
-  --paper: #f7f6f2;
-  --paper-soft: #efeee8;
+  /* Wastend recreation palette — muted green / grey / blue on pale green paper */
+  --paper: #eef4ea;
+  --paper-soft: #e2ecdd;
   --ink: #2b2f2c;
   --ink-soft: #6b6f6a;
   --green: #6f7d63;
