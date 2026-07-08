@@ -1,0 +1,288 @@
+{
+  "nav": {
+    "owner": "Sze Wa Ting",
+    "language": "Language",
+    "switchTo": "Switch to Chinese"
+  },
+  "hero": {
+    "eyebrow": "Curatorial Plan",
+    "title": "Rules for Sorting, Rules for Living",
+    "subtitle": "How Waste Sorting Presumes the 'Ideal Citizen'",
+    "body": "Waste sorting is not treated here as a neutral instruction. The exhibition asks why a practical task can produce moral discomfort, and how local rules construct a normal user who is expected to recognise, obey, and take responsibility at the point of disposal.",
+    "meta": [
+      { "label": "Format", "value": "Three-section proposal" },
+      { "label": "Venue", "value": "L0 Gallery, JCCAC" },
+      { "label": "Dates", "value": "10 Apr - 15 May 2026" },
+      { "label": "Team", "value": "Lunyu CHEN, Xinyi HUANG, Zhuoying LAO, Xinyi LONG, Sze Wa TING, Xiaoqi XIE" }
+    ],
+    "team": "Lunyu CHEN, Xinyi HUANG, Zhuoying LAO, Xinyi LONG, Sze Wa TING, Xiaoqi XIE"
+  },
+  "venue": {
+    "eyebrow": "Venue",
+    "title": "JCCAC sets the scale for a public encounter.",
+    "body": "The proposal is planned for L0 Gallery at Jockey Club Creative Arts Centre, a public-facing cultural site in Shek Kip Mei. The venue matters because the exhibition speaks to residents, students, migrants, and everyday users who meet waste policy through routine disposal.",
+    "facts": [
+      "L0 Gallery, Jockey Club Creative Arts Centre",
+      "30 Pak Tin Street, Shek Kip Mei, Kowloon",
+      "Free entry, 10:00-19:00"
+    ],
+    "imageAlt": "Exterior view of Jockey Club Creative Arts Centre in Hong Kong.",
+    "caption": "Jockey Club Creative Arts Centre, the proposed venue context for the L0 Gallery exhibition.",
+    "source": "Image source: WiNG, Wikimedia Commons, CC BY 3.0."
+  },
+  "premise": {
+    "eyebrow": "The Presumed 'Ideal Citizen'",
+    "title": "A routine civic act becomes a test of the self.",
+    "body": "The project begins from the position of the new resident: a reset position before local sorting norms have become common sense. From there, the rule can become questionable again. The exhibition moves through three linked claims: exposure, mechanism, and consequence.",
+    "cards": [
+      {
+        "label": "Exposure",
+        "title": "Contradictory Standards",
+        "copy": "The same object is governed differently across local systems, yet each rule appears as the answer."
+      },
+      {
+        "label": "Mechanism",
+        "title": "Moralised Compliance",
+        "copy": "Compliance turns from an administrative requirement into a moral obligation, producing anxiety, shame, and judgement."
+      },
+      {
+        "label": "Consequence",
+        "title": "Displaced Responsibility",
+        "copy": "Responsibility is shifted onto individuals for consequences shaped by production, packaging, infrastructure, and regulation."
+      }
+    ]
+  },
+  "comparison": {
+    "eyebrow": "Why the problem exists",
+    "title": "The same item. Different rules.",
+    "body": "Recycling rules are local, but everyday items are not. The comparison below turns the visual logic of the proposal into readable page text: the same object is reorganised by different systems, materials, cleaning conditions, and policy assumptions.",
+    "objectHeader": "Object",
+    "jurisdictions": {
+      "HK": "Hong Kong",
+      "JP": "Japan",
+      "KR": "South Korea",
+      "DK": "Denmark",
+      "SE": "Sweden"
+    },
+    "rows": [
+      {
+        "icon": "pizzaBox",
+        "item": "Greasy pizza box",
+        "classifications": [
+          "General waste",
+          "Combustible waste",
+          "General waste",
+          "Residual waste (Restaffald)",
+          "Residual / household waste"
+        ],
+        "note": "Food and oil contamination prevents paper recycling, so the object is routed toward residual or general waste."
+      },
+      {
+        "icon": "milkCarton",
+        "item": "Milk carton",
+        "classifications": [
+          "Recyclable",
+          "Paper packaging recycling",
+          "Recyclable waste",
+          "Food and beverage packaging",
+          "Paper and cardboard packaging"
+        ],
+        "note": "Cartons sit between paper packaging and food or beverage packaging, with cleaning rules varying by site."
+      },
+      {
+        "icon": "plasticBag",
+        "item": "Plastic shopping bag",
+        "classifications": [
+          "Plastic bag, charged",
+          "Plastic resource / plastic packaging",
+          "Recyclable waste",
+          "Plastic",
+          "Plastic packaging"
+        ],
+        "note": "Bags are treated as plastic in sorting, but policy controls differ between recycling streams, charging systems, and single-use rules."
+      },
+      {
+        "icon": "beverageCup",
+        "item": "Disposable beverage cup",
+        "classifications": [
+          "Plastics, if emptied and rinsed",
+          "Plastic resource or combustible waste",
+          "Regular / general waste",
+          "Residual waste (Restaffald)",
+          "Single-use cup under plastic regulation"
+        ],
+        "note": "The same cup can be treated through material, contamination, lining, market regulation, or disposal limits."
+      }
+    ],
+    "sources": "Comparison content adapted from the provided Wastend proposal slide and policy notes."
+  },
+  "participation": {
+    "eyebrow": "Participation",
+    "title": "Instruction is delayed so uncertainty can become visible.",
+    "stepLabel": "Step",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Guess before the Rules",
+        "detail": "Visitors classify familiar waste objects before any official categories are revealed. Decision-making comes before explanation.",
+        "prompts": ["Greasy pizza box", "Milk carton", "Plastic shopping bag", "Disposable beverage cup"]
+      },
+      {
+        "step": "02",
+        "title": "Reveal",
+        "detail": "Wall panels show how the same object is classified across Hong Kong, Japan, South Korea, Denmark, and Sweden.",
+        "prompts": ["Same object, different classifications", "Local policy shapes the outcome", "Each rule appears correct inside its own system"]
+      },
+      {
+        "step": "03",
+        "title": "Reflect and Archive",
+        "detail": "The Archive Wall turns private hesitation into a shared trace and treats confusion as curatorial evidence.",
+        "prompts": ["The rule that confuses me most is...", "What I most want to ask is...", "If I could change one rule, I would..."]
+      }
+    ]
+  },
+  "floorPlan": {
+    "eyebrow": "Floor plan",
+    "title": "The gallery distributes the argument.",
+    "imageAlt": "Floor plan for Rules for Sorting, Rules for Living at L0 Gallery.",
+    "caption": "L0 Gallery sequence: entry, Archive Wall, documentary clip, moralised compliance works, then the displaced responsibility section.",
+    "sections": [
+      {
+        "title": "Section 1: Contradictory Standards",
+        "anchor": "Exposure",
+        "copy": "Near the entrance, visitors first experience uncertainty through the participatory sorting activity. Their choices then move onto the Archive Wall before being reframed through a documentary interview on foreign residents learning Japanese disposal rules."
+      },
+      {
+        "title": "Section 2: Moralised Compliance",
+        "anchor": "Mechanism",
+        "copy": "Barbara Kruger's works frame sorting as an experience of being watched, judged, and measured. Casa Grande offers a counter-model, asking whether public language can invite rather than discipline."
+      },
+      {
+        "title": "Section 3: Displaced Responsibility",
+        "anchor": "Consequence",
+        "copy": "The final section expands the frame beyond the bin, moving from global plastic circulation to labour, value, production, and packaging design."
+      }
+    ],
+    "source": "Image source: provided curatorial plan document."
+  },
+  "artworks": {
+    "eyebrow": "Artists and artworks",
+    "title": "The works move the question beyond the bin.",
+    "open": "View work details",
+    "dialog": {
+      "close": "Close",
+      "details": "Artwork and exhibition role",
+      "source": "Image source"
+    },
+    "items": [
+      {
+        "id": "kruger",
+        "artist": "Barbara Kruger",
+        "title": "Untitled (Questions), 1991; Untitled (We Are the Objects of Your Suave Entrapments), 1984",
+        "section": "Moralised Compliance",
+        "alt": "Two Barbara Kruger works using photographic images and declarative text.",
+        "role": "Frames a practical rule as silent scrutiny: being seen, measured, and positioned by public language.",
+        "details": [
+          "Kruger's image-text strategy turns public address into a field of pressure.",
+          "In this exhibition, the works help visitors read waste instructions as social judgement, not only neutral information."
+        ],
+        "source": "Provided curatorial plan document."
+      },
+      {
+        "id": "casaGrande",
+        "artist": "Dana Oliveri & Evan Dent",
+        "title": "Friends of the Orphan Signs - Casa Grande, 2016",
+        "section": "Moralised Compliance",
+        "alt": "Roadside signs from Friends of the Orphan Signs - Casa Grande.",
+        "role": "Offers a counter-model to disciplinary public language, showing that signs can also affirm experience and agency.",
+        "details": [
+          "The project repurposes abandoned public signs with new statements.",
+          "Placed after Kruger, it asks whether a rule or sign can support people rather than simply correct them."
+        ],
+        "source": "Provided curatorial plan document."
+      },
+      {
+        "id": "washedUp",
+        "artist": "Alejandro Duran",
+        "title": "Washed Up, 2010-present",
+        "section": "Displaced Responsibility",
+        "alt": "Green plastic bottles arranged among rocks by the shoreline.",
+        "role": "Connects local sorting habits to global plastic circulation and the industrial responsibility hidden behind consumer disposal.",
+        "details": [
+          "Plastic debris becomes a visible record of global movement and accumulation.",
+          "The work moves the exhibition from individual disposal decisions to wider systems of production and circulation."
+        ],
+        "source": "Provided curatorial plan document."
+      },
+      {
+        "id": "qualityOfMercy",
+        "artist": "Aurora Robson",
+        "title": "The Quality of Mercy, 2012",
+        "section": "Displaced Responsibility",
+        "alt": "A suspended sculptural installation made from post-consumer plastic bottles and lighting.",
+        "role": "Reminds visitors that waste does not end at the correct bin; it continues to exist in other forms and systems.",
+        "details": [
+          "Robson's plastic forms make discarded material physically present and difficult to ignore.",
+          "The installation supports the exhibition's move from sorting obedience to material afterlife."
+        ],
+        "source": "Provided curatorial plan document."
+      },
+      {
+        "id": "wasteLand",
+        "artist": "Vik Muniz",
+        "title": "Waste Land / Pictures of Garbage, 2008",
+        "section": "Displaced Responsibility",
+        "alt": "Large-scale portraits made from garbage and photographed from above.",
+        "role": "Reintroduces human dignity and labour into the chain of waste, shifting attention from objects to people who handle them.",
+        "details": [
+          "Muniz's project connects waste material with the workers and communities who process it.",
+          "It expands the question of responsibility beyond the person standing at a recycling bin."
+        ],
+        "source": "Provided curatorial plan document."
+      },
+      {
+        "id": "plasticBagStore",
+        "artist": "Robin Frohardt",
+        "title": "The Plastic Bag Store, 2020",
+        "section": "Displaced Responsibility",
+        "alt": "An immersive supermarket installation with objects made from single-use plastic.",
+        "role": "Traces waste back to production and packaging design, asking why difficult-to-recycle products are made in the first place.",
+        "details": [
+          "The work imitates retail display while revealing the absurd volume of single-use packaging.",
+          "It closes the exhibition by shifting attention from correct disposal to product design and consumer infrastructure."
+        ],
+        "source": "Provided curatorial plan document."
+      }
+    ]
+  },
+  "outcomes": {
+    "eyebrow": "Desired Outcomes",
+    "title": "Not better obedience, but a more critical relation to rules.",
+    "items": [
+      "Recognise anxiety and shame as systemic effects rather than personal failure.",
+      "See local sorting rules as arrangements, not natural truths.",
+      "Turn private hesitation into public reflection through participation and archive.",
+      "Shift attention from obedience to structure, governance, and responsibility."
+    ]
+  },
+  "resources": {
+    "eyebrow": "Support",
+    "title": "Only the supports that shape the public programme remain visible.",
+    "heading": "Required supports",
+    "supports": [
+      "GREEN @ COMMUNITY program for policy interpretation and educational resources",
+      "Home Affairs Department for contact channels with local community centres and immigrant groups",
+      "The Hong Kong Federation of Youth Groups for sponsorship, volunteer teams, and local partnerships"
+    ],
+    "notes": [
+      { "label": "Estimated budget", "value": "HKD 312,600" },
+      { "label": "Funding route", "value": "Youth, environmental, cultural, and creative-sector sponsorship" }
+    ]
+  },
+  "references": {
+    "eyebrow": "References",
+    "title": "Policy sources and theoretical frame.",
+    "theory": "Theoretical references"
+  },
+  "footer": "Curatorial Plan - 2026"
+}
