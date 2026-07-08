@@ -258,9 +258,11 @@ function ArtworkDialog({
                 ))}
               </ul>
             </div>
-            <p className="mt-6 text-[12px] leading-relaxed text-[var(--ink-soft)]">
-              {t("artworks.dialog.source")}: {work.source}
-            </p>
+            {work.source ? (
+              <p className="mt-6 text-[12px] leading-relaxed text-[var(--ink-soft)]">
+                {t("artworks.dialog.source")}: {work.source}
+              </p>
+            ) : null}
           </div>
         </div>
       </div>
@@ -539,8 +541,12 @@ export function WastendPage() {
               />
               <figcaption className="px-2 py-3 text-[12px] leading-relaxed text-[var(--ink-soft)]">
                 {t("floorPlan.caption")}
-                <br />
-                {t("floorPlan.source")}
+                {t("floorPlan.source") ? (
+                  <>
+                    <br />
+                    {t("floorPlan.source")}
+                  </>
+                ) : null}
               </figcaption>
             </figure>
           </ScaleIn>
