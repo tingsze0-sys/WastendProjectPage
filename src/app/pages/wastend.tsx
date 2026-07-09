@@ -315,7 +315,7 @@ export function WastendPage() {
               </span>
             </FadeUp>
             <FadeUp delay={0.08} y={28}>
-              <h1 className="mt-5 max-w-[9.8ch] text-[clamp(2.62rem,10.4vw,6.8rem)] font-semibold leading-[1.08] tracking-[-0.03em] text-[var(--ink)] sm:max-w-[11ch] sm:leading-[0.98] md:leading-[0.94]">
+              <h1 className="mt-5 max-w-[9.8ch] text-[clamp(2.62rem,8.8vw,5.9rem)] font-semibold leading-[1.08] tracking-[-0.025em] text-[var(--ink)] sm:max-w-[11ch] sm:leading-[1.06] md:leading-[1.04]">
                 {t("hero.title")}
               </h1>
             </FadeUp>
