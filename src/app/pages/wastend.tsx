@@ -354,30 +354,30 @@ export function WastendPage() {
       </section>
 
       <section className="border-y border-[var(--line)] bg-[var(--paper-soft)]">
-        <div className="mx-auto max-w-[1180px] px-5 py-14 sm:px-6 md:px-10 md:py-24">
-          <SectionHeading eyebrow={t("premise.eyebrow")} title={t("premise.title")} />
+        <div className="mx-auto max-w-[1180px] px-5 py-9 sm:px-6 md:px-10 md:py-24">
+          <SectionHeading eyebrow={t("premise.eyebrow")} title={t("premise.title")} compact />
           <FadeUp delay={0.08}>
-            <p className="max-w-[68ch] text-[18px] leading-relaxed text-[var(--ink-soft)]">
+            <p className="max-w-[68ch] text-[15px] leading-relaxed text-[var(--ink-soft)] md:text-[18px]">
               {t("premise.body")}
             </p>
           </FadeUp>
 
-          <Stagger className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
+          <Stagger className="mt-6 grid grid-cols-1 gap-3 md:mt-12 md:grid-cols-3 md:gap-5">
             {presumptions.map((item, index) => (
               <StaggerItem key={item.title}>
                 <PixelCard
                   variant={PIXEL_VARIANTS[index % PIXEL_VARIANTS.length]}
                   noFocus
-                  className="flex h-full flex-col rounded-2xl border border-[var(--line)] bg-white/55 p-6"
+                  className="flex h-full flex-col rounded-2xl border border-[var(--line)] bg-white/55 p-4 md:p-6"
                 >
                   <article className="pixel-card-content flex h-full flex-col">
                     <span className="text-[11px] uppercase tracking-[0.2em] text-[var(--green)]">
                       {item.label}
                     </span>
-                    <h3 className="mt-4 text-[1.35rem] font-semibold leading-tight text-[var(--ink)]">
+                    <h3 className="mt-3 text-[1.12rem] font-semibold leading-tight text-[var(--ink)] md:mt-4 md:text-[1.35rem]">
                       {item.title}
                     </h3>
-                    <p className="mt-4 text-[15px] leading-relaxed text-[var(--ink-soft)]">
+                    <p className="mt-2 text-[13px] leading-relaxed text-[var(--ink-soft)] md:mt-4 md:text-[15px]">
                       {item.copy}
                     </p>
                   </article>
@@ -388,38 +388,38 @@ export function WastendPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1180px] px-5 py-14 sm:px-6 md:px-10 md:py-24">
-        <SectionHeading eyebrow={t("comparison.eyebrow")} title={t("comparison.title")} />
+      <section className="mx-auto max-w-[1180px] px-5 py-9 sm:px-6 md:px-10 md:py-24">
+        <SectionHeading eyebrow={t("comparison.eyebrow")} title={t("comparison.title")} compact />
         <FadeUp delay={0.08}>
-          <p className="max-w-[68ch] text-[18px] leading-relaxed text-[var(--ink-soft)]">
+          <p className="max-w-[68ch] text-[15px] leading-relaxed text-[var(--ink-soft)] md:text-[18px]">
             {t("comparison.body")}
           </p>
         </FadeUp>
 
-        <div className="mt-10 grid gap-4 md:hidden">
+        <div className="mt-6 grid gap-3 md:hidden">
           {comparisonRows.map((row) => (
-            <article key={row.item} className="rounded-2xl border border-[var(--line)] bg-white/55 p-4">
-              <div className="flex items-center gap-4">
-                <ObjectIcon type={row.icon} />
-                <h3 className="text-[1.25rem] font-semibold leading-tight text-[var(--ink)]">
+            <article key={row.item} className="rounded-2xl border border-[var(--line)] bg-white/55 p-3">
+              <div className="flex items-center gap-3">
+                <ObjectIcon type={row.icon} size="small" />
+                <h3 className="text-[1.08rem] font-semibold leading-tight text-[var(--ink)]">
                   {row.item}
                 </h3>
               </div>
-              <div className="mt-5 grid grid-cols-2 gap-2">
+              <div className="mt-3 grid grid-cols-2 gap-2">
                 {row.classifications.map((classification, index) => (
                   <div
                     key={`${row.item}-mobile-${JURISDICTIONS[index].code}`}
-                    className="rounded-2xl border border-[var(--line)] bg-[var(--paper)] p-3"
+                    className="rounded-2xl border border-[var(--line)] bg-[var(--paper)] p-2.5"
                   >
                     <FlagBadge
                       flag={JURISDICTIONS[index].flag}
                       code={JURISDICTIONS[index].code}
                     />
-                    <p className="mt-3 text-[13px] leading-snug text-[var(--ink)]">{classification}</p>
+                    <p className="mt-2 text-[12px] leading-snug text-[var(--ink)]">{classification}</p>
                   </div>
                 ))}
               </div>
-              <p className="mt-4 rounded-2xl bg-white/65 p-4 text-[13px] leading-relaxed text-[var(--ink-soft)]">
+              <p className="mt-3 rounded-2xl bg-white/65 p-3 text-[12px] leading-relaxed text-[var(--ink-soft)]">
                 {row.note}
               </p>
             </article>
@@ -605,16 +605,16 @@ export function WastendPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1180px] px-5 py-14 sm:px-6 md:px-10 md:py-24">
-        <SectionHeading eyebrow={t("outcomes.eyebrow")} title={t("outcomes.title")} />
-        <Stagger className="grid grid-cols-1 gap-4 md:grid-cols-2">
+      <section className="mx-auto max-w-[1180px] px-5 py-9 sm:px-6 md:px-10 md:py-24">
+        <SectionHeading eyebrow={t("outcomes.eyebrow")} title={t("outcomes.title")} compact />
+        <Stagger className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4">
           {outcomes.map((outcome, index) => (
             <StaggerItem key={outcome}>
-              <div className="flex h-full gap-4 rounded-2xl border border-[var(--line)] bg-white/55 p-5">
+              <div className="flex h-full gap-3 rounded-2xl border border-[var(--line)] bg-white/55 p-4 md:gap-4 md:p-5">
                 <span className="text-[12px] uppercase tracking-[0.18em] text-[var(--green)]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <p className="text-[16px] leading-relaxed text-[var(--ink)]">{outcome}</p>
+                <p className="text-[14px] leading-relaxed text-[var(--ink)] md:text-[16px]">{outcome}</p>
               </div>
             </StaggerItem>
           ))}
@@ -654,15 +654,15 @@ export function WastendPage() {
       </section>
 
       <section className="border-y border-[var(--line)] bg-[var(--paper-soft)]">
-        <div className="mx-auto max-w-[1180px] px-5 py-14 sm:px-6 md:px-10 md:py-24">
-          <SectionHeading eyebrow={t("resources.eyebrow")} title={t("resources.title")} />
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_0.9fr]">
+        <div className="mx-auto max-w-[1180px] px-5 py-9 sm:px-6 md:px-10 md:py-24">
+          <SectionHeading eyebrow={t("resources.eyebrow")} title={t("resources.title")} compact />
+          <div className="grid grid-cols-1 gap-6 md:gap-10 lg:grid-cols-[1fr_0.9fr]">
             <FadeUp>
               <div>
-                <h3 className="text-[1.25rem] font-semibold text-[var(--ink)]">{t("resources.heading")}</h3>
-                <ul className="mt-5 space-y-3">
+                <h3 className="text-[1.08rem] font-semibold text-[var(--ink)] md:text-[1.25rem]">{t("resources.heading")}</h3>
+                <ul className="mt-3 space-y-2 md:mt-5 md:space-y-3">
                   {supports.map((support) => (
-                    <li key={support} className="rounded-2xl border border-[var(--line)] bg-white/55 p-4 text-[15px] leading-relaxed text-[var(--ink-soft)]">
+                    <li key={support} className="rounded-2xl border border-[var(--line)] bg-white/55 p-3 text-[13px] leading-relaxed text-[var(--ink-soft)] md:p-4 md:text-[15px]">
                       {support}
                     </li>
                   ))}
@@ -670,13 +670,13 @@ export function WastendPage() {
               </div>
             </FadeUp>
             <FadeUp delay={0.08}>
-              <div className="grid gap-4">
+              <div className="grid gap-3 md:gap-4">
                 {resourceNotes.map((note) => (
-                  <div key={note.label} className="rounded-2xl border border-[var(--line)] bg-white/55 p-5">
+                  <div key={note.label} className="rounded-2xl border border-[var(--line)] bg-white/55 p-4 md:p-5">
                     <span className="text-[11px] uppercase tracking-[0.2em] text-[var(--ink-soft)]">
                       {note.label}
                     </span>
-                    <p className="mt-3 text-[1.35rem] font-normal leading-tight text-[var(--ink)]">
+                    <p className="mt-2 text-[1.08rem] font-normal leading-tight text-[var(--ink)] md:mt-3 md:text-[1.35rem]">
                       {note.value}
                     </p>
                   </div>
@@ -688,16 +688,16 @@ export function WastendPage() {
       </section>
 
       <section className="border-t border-[var(--line)] bg-[var(--paper)]">
-        <div className="mx-auto max-w-[1180px] px-5 py-14 sm:px-6 md:px-10 md:py-24">
-          <SectionHeading eyebrow={t("references.eyebrow")} title={t("references.title")} />
-          <ReferenceList groups={referenceGroups} />
-          <div className="mt-12 border-t border-[var(--line)] pt-8">
+        <div className="mx-auto max-w-[1180px] px-5 py-9 sm:px-6 md:px-10 md:py-24">
+          <SectionHeading eyebrow={t("references.eyebrow")} title={t("references.title")} compact />
+          <ReferenceList groups={referenceGroups} compact />
+          <div className="mt-7 border-t border-[var(--line)] pt-5 md:mt-12 md:pt-8">
             <h3 className="text-[12px] uppercase tracking-[0.2em] text-[var(--ink-soft)]">
               {t("references.theory")}
             </h3>
-            <ul className="mt-4 grid grid-cols-1 gap-x-10 gap-y-2 md:grid-cols-2">
+            <ul className="mt-3 grid grid-cols-1 gap-x-10 gap-y-1.5 md:mt-4 md:grid-cols-2 md:gap-y-2">
               {THEORY.map((item) => (
-                <li key={item} className="text-[13px] leading-relaxed text-[var(--ink-soft)]">
+                <li key={item} className="text-[12px] leading-relaxed text-[var(--ink-soft)] md:text-[13px]">
                   {item}
                 </li>
               ))}
