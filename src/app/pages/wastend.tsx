@@ -75,6 +75,18 @@ const JURISDICTIONS = [
 
 const PIXEL_VARIANTS = ["green", "blue", "warm"] as const;
 
+const STEP_ONE_PROMPT_ICONS: ObjectIconName[] = [
+  "pizzaBox",
+  "milkCarton",
+  "plasticBag",
+  "beverageCup",
+];
+
+const PARTICIPATION_PROMPT_EMOJIS: Record<string, string[]> = {
+  "02": ["🔁", "📍", "✅"],
+  "03": ["❓", "💬", "✍️"],
+};
+
 const ARTWORK_IMAGES = {
   kruger: krugerImage,
   casaGrande: casaGrandeImage,
@@ -139,8 +151,11 @@ const THEORY = [
   "Shklovsky, V. Art as Technique.",
 ];
 
-function ObjectIcon({ type }: { type: ObjectIconName }) {
-  const common = "h-16 w-16 drop-shadow-[0_14px_24px_rgba(43,47,44,0.14)]";
+function ObjectIcon({ type, size = "large" }: { type: ObjectIconName; size?: "large" | "small" }) {
+  const common =
+    size === "small"
+      ? "h-7 w-7 shrink-0 drop-shadow-[0_8px_16px_rgba(43,47,44,0.12)]"
+      : "h-16 w-16 drop-shadow-[0_14px_24px_rgba(43,47,44,0.14)]";
 
   if (type === "pizzaBox") {
     return (
@@ -300,7 +315,7 @@ export function WastendPage() {
               </span>
             </FadeUp>
             <FadeUp delay={0.08} y={28}>
-              <h1 className="mt-5 max-w-[11ch] text-[clamp(3rem,8vw,6.8rem)] font-semibold leading-[0.94] tracking-[-0.04em] text-[var(--ink)]">
+              <h1 className="mt-5 max-w-[9.8ch] text-[clamp(2.62rem,10.4vw,6.8rem)] font-semibold leading-[1.08] tracking-[-0.03em] text-[var(--ink)] sm:max-w-[11ch] sm:leading-[0.98] md:leading-[0.94]">
                 {t("hero.title")}
               </h1>
             </FadeUp>
@@ -479,14 +494,29 @@ export function WastendPage() {
                       {step.detail}
                     </p>
                     <ul className="mt-6 space-y-2">
-                      {step.prompts.map((prompt) => (
-                        <li
-                          key={prompt}
-                          className="rounded-full border border-[var(--line)] bg-[var(--paper)] px-4 py-2 text-[13px] text-[var(--ink)]"
-                        >
-                          {prompt}
-                        </li>
-                      ))}
+                      {step.prompts.map((prompt, promptIndex) => {
+                        const objectIcon = step.step === "01" ? STEP_ONE_PROMPT_ICONS[promptIndex] : undefined;
+                        const emoji = PARTICIPATION_PROMPT_EMOJIS[step.step]?.[promptIndex];
+
+                        return (
+                          <li
+                            key={prompt}
+                            className="flex items-center gap-2.5 rounded-full border border-[var(--line)] bg-[var(--paper)] px-3 py-2 text-[13px] text-[var(--ink)]"
+                          >
+                            {objectIcon ? (
+                              <span className="flex h-7 w-7 shrink-0 items-center justify-center" aria-hidden="true">
+                                <ObjectIcon type={objectIcon} size="small" />
+                              </span>
+                            ) : null}
+                            {emoji ? (
+                              <span className="flex h-6 w-6 shrink-0 items-center justify-center text-[14px]" aria-hidden="true">
+                                {emoji}
+                              </span>
+                            ) : null}
+                            <span className="min-w-0 leading-snug">{prompt}</span>
+                          </li>
+                        );
+                      })}
                     </ul>
                   </article>
                 </PixelCard>
